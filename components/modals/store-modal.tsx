@@ -36,19 +36,19 @@ export const StoreModal = () => {
     },
   });
 
-//   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-//     try {
-//       setLoading(true);
-//       const response = await axios.post("/api/stores", values);
-//       console.log(response.data);
-//       toast.success("Berhasil membuat toko");
-//       window.location.assign(`/${response.data.id}`)
-//     } catch (error) {
-//       toast.error("Gagal Membuat Toko");
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    // try {
+    //   setLoading(true);
+    //   const response = await axios.post("/api/stores", values);
+    //   console.log(response.data);
+    //   toast.success("Berhasil membuat toko");
+    //   window.location.assign(`/${response.data.id}`)
+    // } catch (error) {
+    //   toast.error("Gagal Membuat Toko");
+    // } finally {
+    //   setLoading(false);
+    // }
+  };
 
   return (
     <Modal
@@ -57,7 +57,7 @@ export const StoreModal = () => {
       isOpen={storeModal.isOpen}
       onClose={storeModal.onClose}
     >
-      {/* <div>
+      <div>
         <div className="space-y-4 py-2 pb-4">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -93,7 +93,7 @@ export const StoreModal = () => {
             </form>
           </Form>
         </div>
-      </div> */}
+      </div>
     </Modal>
   );
 };
